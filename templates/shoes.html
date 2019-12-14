@@ -1,0 +1,31 @@
+<title>Shoes</title>
+
+{% include 'base.html' %}
+
+{% block content%}
+<div class="container">
+    <a href="/" class="btn btn-info btn-md"><span class="glyphicon glyphicon-home"></span> Home </a>
+    <div class="row">
+          <div class="col-md-4">
+            <h3>Shoes 1</h3>
+            {% load static %}
+            <a href="#"><img src="{% static "images/shoes1.jpg" %}" class="img-rounded" alt="Cinque Terre" width="300" height="350"></a>
+          </div>
+          <div class="col-md-4">
+            <h3>Shoes 2</h3>
+            <a href="#"><img src="{% static "images/shoes2.jpg" %}" class="img-rounded" alt="Cinque Terre" width="300" height="350"></a>
+          </div>
+          <div class="col-md-4">
+                <h3>Shoes 3</h3>
+                <a href="#"><img src="{% static "images/shoes3.jpg" %}" class="img-rounded" alt="Cinque Terre" width="300" height="350"></a>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-md-6">
+            <h3>Shoes 4</h3>        
+            {% load static %}
+            <a href="#"><img src="{% static "images/shoes4.jpg" %}" class="img-rounded" alt="Cinque Terre" width="300" height="350"></a>
+          </div>
+          </div>
+        </div>
+{% endblock %}

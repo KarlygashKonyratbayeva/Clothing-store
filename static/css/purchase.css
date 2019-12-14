@@ -1,0 +1,24 @@
+body{
+	background:  url((project/static/media/images/cpage/fon.png);
+}
+.photo2{
+	padding-left: 100px;
+}
+.clothes2{
+	width: 1100px;
+	text-align: center;
+	background: #FFF;
+	border: 3px solid #0000CD;
+}
+
+.TD{
+	border: 3px solid #0000CD;
+}
+
+
+.TD:hover .all{
+	transform: translate3d(-10px, -10px, 0);
+	opacity: .8;
+}
+
+

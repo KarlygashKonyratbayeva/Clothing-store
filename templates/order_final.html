@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Odri Store</title>
+   <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icom" href="{% static 'media/images/plat.jpg' %}">
+</head>
+
+ {% block content %}
+
+     <div class="col-sm-8 col-sm-offset-2">
+        <h3 class="text-center">Thank you! Your order is accepted. You will get all details to your email.</h3>
+        <p class="text-center"><a href="{% url 'base' %}"><button class="btn btn-default">Back to shopping</button></a></p>
+     </div>
+
+{% endblock %}

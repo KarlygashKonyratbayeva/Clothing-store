@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<title>Odri Store</title>
+  
+	 <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icom" href="{% static 'media/images/plat.jpg' %}">
+</head>
+<body>
+	<!-- jQuery -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/add_to_cart.js' %}"></script>
+    <script src="{% static 'js/remove_from_cart.js' %}"></script>
+    <script src="{% static 'js/cart_item_quantity.js' %}"></script>
+    <script src="{% static 'js/order.js' %}"></script>
+
+<header class="header">
+	<div class="container">
+  {% block content %}
+		<div class="header_inner">
+			<div class="header_logo">ODRI</div>
+			<nav class="nav">
+                <ul class="nav navbar-nav">
+                {% if not request.get_full_path == '/' %}
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          {% for category in categories %}
+                              <li><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
+                          {% endfor %}
+                      </ul>
+                    </li>
+                {% endif %}
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                	 {% if user.is_authenticated %}
+                    <li><a class="nav_link"> <p>Hello, {{ user.username }}</p></a></li>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'user_profile' %}" class="nav_link">Profile</a></li>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'cart' %}" class="nav_link">Cart <span class="badge cart_count">{{ cart.get_cart_items_count }}</span></a></li>
+                    {% endif %}
+                    {% if not user.is_authenticated %}
+                    <li><a href="{% url 'login_view' %}" class="nav_link" >Login/Register</a></li>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'sign_out' %}" class="nav_link">Sign out</a></li>
+                    {% endif %}
+                </ul>
+	</div>
+			</nav>
+		</div>
+	</div>
+	{% endblock %}
+</header>
+
+<section class="section0">
+	
+	<div class="container0">
+		<div class="services">
+			
+		</div>
+		<div class="services">
+		
+			
+		</div>
+		
+	</div>
+</section>
+
+<section class="section2">
+	<div class="about_store">
+		<div class="about_str">
+			<h2 class="takyryp">About Store</h2>
+			<p class="p_go">Here at Odri Store, we reimagine timeless aesthetics for a modern era, creating original prints and designing unique pieces that are accessible to all.</p>
+			<a class="btn" href="#"> Contacts</a>
+		</div>
+	</div>
+	<div class="section2_img">
+		<img class="img4" src="{% static 'media/images/saless.jpg' %}">
+	</div>
+</section>
+
+
+<section class="section">
+
+	<div class="container">
+		<div class="section_header">
+			<h2 class="section_title" >~Clothes store~</h2>
+			<h3 class="section_suptitle" >Stay up to date</h3>
+		</div>
+		
+		
+            <div class="col-md-9">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                {% for product in products %}
+                                {% if forloop.first %}
+                                <div class="item active">
+                                    <img class="slide-image" src="{{ product.image.url }}" style="padding-left: 260px; height: 300px;">
+                                    <p class="text-center"><a href=""><button class="btn btn-primary">{{ product.title }}</button></a></p>
+                                </div>
+                                {% else %}
+                                <div class="item">
+                                    <img class="slide-image" src="{{ product.image.url }}" style="padding-left: 260px; height: 300px;">
+                                    <p class="text-center"><a href="#"><button class="btn btn-primary">{{ product.title }}</button></a></p>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev" style="background: transparent;">
+                                <span class="glyphicon glyphicon-chevron-left" style="color: black;"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next" style="background: transparent;">
+                                <span class="glyphicon glyphicon-chevron-right" style="color: black;"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+	</div>	
+</section>
+
+<section class="section3">
+	<div class="tables">
+		<table class="tables1">
+					<tr class="TR1">
+					 <td class="TD1"> <img class="moru1"src="{% static 'media/images/about/this1.jpg' %}">  </td>
+						<td class="TD2"> <img class="moru2"src="{% static 'media/images/about/this2.jpg' %}">  
+						</td>
+						<td class="TD3"> <img class="moru3" src="{% static 'media/images/about/this3.jpg' %}">  
+						</td>
+					</tr>
+					<tr class="TR2">
+						<td class="TD4"> <img class="moru4"src="{% static 'media/images/about/this4.jpg' %}">  
+						</td>
+						<td class="TD5"> <img class="moru5"src="{% static 'media/images/about/this5.jpg' %}">  
+						</td>
+						<td class="TD6"> <img class="moru6" src="{% static 'media/images/about/this6.jpg'%}">  
+						</td>
+					</tr>
+		</table>
+		<div class="div_btn2">
+			<a href="{% url 'pagec_view' %}" class="btn2" href="#"> Show more</a>		
+	</div>
+
+
+<section class="sectionEnd">
+	<div class="sony">
+		<div class=sony1>
+			<div class="header_logo2">ODRI</div>
+		</div>
+		<h4 class="podpis2">
+			Online Shoping Word<br>
+			Single Call Center<br>
+			Free calls in Kazakhstan <br>
+			odri@mail.ru <br>
+			87474781501<br>
+			Freedback
+			</h4>
+	</div>
+	<div class="google">
+		<h4>Application Odri.kz</h4>
+		<a class="btn" href="#"> Google Play </a><br><br>
+		<a class="btn" href="#"> App store </a>			
+	</div>
+</section>
+	<div class="Search"></div>
+</body>
+</html>

@@ -1,0 +1,453 @@
+body{
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	line-height: 1.6;
+	color: black;
+	background: #fff url(project/static/media/images/greekvase.jpg);
+}
+
+.header{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.header_inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #4682B4;
+	height: 120px;
+
+}
+
+.container{
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	margin-left: 0;
+
+}
+
+.header_logo{
+	font-size: 30px;
+	font-weight: 600;
+	color: #fff;
+	margin-left: 70px;
+	font-family: Lucida Sans Unicode;
+}
+
+.header_logo:after{
+	content:"Fashion area";
+	font-size: 13px;
+	font-weight: 100;
+	color: #fff;
+	display: block;
+	width: 100%;
+	font-family: Courier New;
+}
+
+.nav{
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-right: 40px;
+}
+
+.nav_link{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 15px;
+	color: #fff;
+	text-decoration: none; 
+	transition: color .2s linear;
+	position: relative;
+}
+
+.nav_link:after{
+	content:"";
+	display: block;
+	width: 100%;
+	height: 3px;
+	
+	background-color: #FF4500;
+	opacity: 0;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+
+	transition: opacity .1s linear;
+}
+
+.nav_link:hover{
+	color: #FF4500;
+}
+
+.nav_link:hover:after{
+	opacity: 1;
+}
+
+.korzina3{
+	height: 30px;
+	border-radius: 100%;
+}
+
+form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+.d1 input {
+  width: 289px;
+  height: 30px;
+  padding-left: 10px;
+  border: 1px solid #7BA7AB;
+  border-radius: 5px;
+  outline: none;
+ 
+
+}
+
+.d1 button {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 33px;
+  border: none;
+  background: #FF6347;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.d1 button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #fff;
+}
+.section0{
+	padding-top: 100px;
+	
+}
+.container0{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+}
+.services{
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.services_item{
+	display: flex;
+	padding-top: 50px; 
+	padding-left: 90px;
+	
+	position: relative;
+}
+
+.service_icon{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;	
+	
+}
+
+.clothes{
+	font-size: 15px;
+	color: #333;
+	padding-right: 40px;
+	padding-top: 20px;
+	font-weight: bolder;
+}
+.clothes:hover{
+	color: #FF4500;
+}
+
+.clothes:hover:after{
+	opacity: 1;
+}
+ bolder;
+}
+
+.intro{
+	position: relative;	
+}
+.photo{
+	position: relative;	
+}
+
+.photo1{
+	margin-top: 100px;
+	margin-left: 0px;
+	width: 100%;
+	height: 480px;
+}
+
+.section{
+	width: 100%;
+	
+	margin-left: 0px;
+	margin-top: 0px;
+	align-items: center;
+	
+}
+
+.section_header{
+	width:100%;
+	max-width: 800px;
+	margin-top: 0px;
+	margin-left: 150px;
+	
+	text-align: center;
+}
+
+.section_title{
+	font-size: 30px;
+	font-family: 'Kaushan Script', cursive;
+	color: #333;
+}
+
+.section_suptitle{
+	font-family: Courier New;
+	font-size: 20px;
+	color: #333; 
+}
+
+.about{
+	margin-top: 50px;
+	margin-right: 120px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.about_item{
+	width: 30%;
+	
+}
+
+.about_item:hover .about_img img{
+	opacity: .4;
+}
+
+.about_img{
+	background: linear-gradient(to bottom, #FF4500, #4682B4);
+}
+.image{
+	height: 250px;
+}
+
+.about_img img{
+	transition: opacity .2s linear;
+}
+
+.definition{
+	display: flex;
+	justify-content: space-around;
+}
+
+.section2{
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.img4{
+	height: 400px;
+}
+
+.about_store{
+	background-color: #FF4500; 
+	
+	
+}
+.about_str{
+	margin-top: 90px;
+	margin-left: 100px;
+	margin-right: 60px;
+}
+
+.takyryp{
+	color: white;
+}
+
+.p_go{
+	font-family: Lucida Sans Unicode;
+	color: white;
+	font-size: 19px;
+}
+
+.btn{
+	display: inline-block;
+
+	vertical-align: top;
+	padding: 8px 30px;
+
+	border: 3px solid #fff;
+
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;  
+}
+
+.btn:hover{
+	background-color: #fff;
+	color: #333;
+}
+.tables{
+	margin-left: 260px;
+	margin-top: 80px;
+}
+.moru1{
+	height: 270px;
+}
+.moru2{
+	height: 270px;
+}
+.moru3{
+	height: 270px;
+}
+.moru4{
+	height: 270px;
+}
+.moru5{
+	height: 270px;
+}
+.moru6{
+	height: 270px;
+}
+
+.tables{
+	text-align: center;
+}
+
+.tables1{
+	width: 50px;
+	text-align: center;
+	background: #4682B4;
+}
+
+.TD1:hover .moru1{
+	transform: translate3d(-10px, -10px, 0);
+	opacity: .8;
+}
+.TD2:hover .moru2{
+	transform: translate3d(-10px, -10px, 0);
+	opacity: .8;
+}
+.TD3:hover .moru3{
+	transform: translate3d(-10px, -10px, 0);
+	opacity: .8;
+}
+.TD4:hover .moru4{
+	transform: translate3d(-10px, -10px, 0);
+	opacity: .8;
+}
+.TD5:hover .moru5{
+	transform: translate3d(-10px, -10px, 0);
+	opacity: .8;
+}
+.TD6:hover .moru6{
+	transform: translate3d(-10px, -10px, 0);
+	opacity: .8;
+}
+
+.col-md-9{
+	align-items: center;
+}
+
+.div_btn2{
+	position: absolute;
+	margin-top: 40px;
+	margin-left: 320px;
+}
+.btn2{
+	display: inline-block;
+
+	vertical-align: top;
+	padding: 9px 30px;
+
+	border: 2px solid #4682B4;
+
+	font-size: 15px;
+	font-weight: 700;
+	color: #4682B4;
+	text-transform: uppercase;
+	text-decoration: none;  
+}
+
+.btn2:hover{
+	background-color: #4682B4;
+	color: #fff;
+}
+
+.sectionEnd{
+	margin-top: 130px;
+	background-color: #4682B4;
+	height: 280px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.sony{
+	padding-left: 20px;
+}
+
+.header_logo2{
+	padding-top: 10px;
+	padding-left: 30px;
+	font-size: 50px;
+	font-weight: 500;
+	color: #fff;
+	font-family: "Bradley Hand", cursive;
+	text-align: left;
+}
+
+.podpis2{
+	margin-left: 30px;
+	color:#fff;
+}
+
+
+
+.google{
+	padding-right: 80px;
+	padding-top: 10px;
+	color: #fff;
+}
+.btn{
+	display: inline-block;
+
+	vertical-align: top;
+	padding: 8px 30px;
+
+	border: 3px solid #fff;
+
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;  
+}
+
+.btn:hover{
+	background-color: #fff;
+	color: #333;
+}
+
+
+
+
